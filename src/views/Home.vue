@@ -2,7 +2,7 @@
   <ion-page>
     <ion-content class="ion-padding">
       <h1 class="greeting">
-        Hi, Kasonde!
+        Hi, {{getSaveAllUsers()}}!
       </h1>
       <p class="greeting-tag">
         Let's make your banking needs easy!
@@ -70,9 +70,15 @@ export default {
       ],
     };
   },
+   mounted() {
+    this.$store.dispatch("saveAllUsers");
+  },
   methods: {
     cardDetails() {
       this.$router.push("/card-details");
+    },
+    getSaveAllUsers(){
+      return this.$store.getters.getSaveAllUsers
     }
   }
 };

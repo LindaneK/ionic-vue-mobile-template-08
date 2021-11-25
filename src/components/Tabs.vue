@@ -2,11 +2,11 @@
   <ion-page>
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="/home" href="/home">
+        <ion-tab-button selected="true" tab="/home" href="/home">
           <ion-icon :icon="home" />
         </ion-tab-button>
           
-        <ion-tab-button tab="/payments" href="/payments">
+        <ion-tab-button selected tab="/payments" href="/payments">
           <ion-icon :icon="cardOutline" />
         </ion-tab-button>
 
